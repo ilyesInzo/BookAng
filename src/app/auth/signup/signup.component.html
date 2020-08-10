@@ -1,0 +1,22 @@
+<div class="raw">
+    <div class="col-sm-8 col-sm-offset-2">
+
+
+        <form [formGroup]="signUpFrom" (ngSubmit)="onSubmit()">
+
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <input type="email" class="form-control" id="Email" formControlName="email" autocomplete="email">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" class="form-control" id="password" formControlName="passWord" autocomplete="current-password">
+            </div>
+
+            <button type="submit" class="btn btn-primary" [disabled]="signUpFrom.invalid">Submit</button>
+        </form>
+        <p>{{error}}</p>
+
+    </div>
+</div>
