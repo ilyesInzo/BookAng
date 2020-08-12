@@ -1,1 +1,10 @@
-<p>view-book works!</p>
+<div class="raw">
+    <div class="col-xs-12">
+        <h1>{{book.titre}}</h1>
+        <h3>{{book.author}}</h3>
+        <p>{{book.synopsis}}</p>
+        <img style="min-width: 400px;" *ngIf="book.photo" [src]="book.photo">
+        <button type="button" class="btn btn-primary" (click)="onBack()">list livres</button>
+
+    </div>
+</div>
